@@ -8,8 +8,12 @@ fn panic(_info: &PanicInfo) -> ! {
    loop {}
 }
 
+#![feature(global_asm)]
+
+global_asm!(include_str!("boot/entry64.asm"));
+
 #[no_mangle] // don't mangle the name of this function
-pub extern "C" fn _start() -> ! {
+pub extern "C" fn rust_main() -> ! {
     loop {}
 }
 
