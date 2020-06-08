@@ -1,2 +1,5 @@
 Cargo.lock
 target/
+Cargo.toml
+qemu*/
+.DS_Store
